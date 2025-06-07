@@ -135,3 +135,6 @@ INSERT INTO `exam_system`.`user` () VALUES (1, 'admin', '$2a$10$urMXyYgPLUxNFpC4
 ;
 UNLOCK TABLES;
 COMMIT;
+
+-- 更新用户激活状态
+UPDATE user SET active = 1 WHERE username IN ('admin', 'student1', 'test1');
